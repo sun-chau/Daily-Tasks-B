@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Header with Quick Add [+] Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="DAILY OBJECTIVES"
+            android:textColor="#FFE600"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1A1A1A"
+            android:fontFamily="monospace"
+            android:paddingStart="6dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:layout_marginEnd="6dp"
+            android:text="0/0 DONE"
+            android:textColor="#00FFFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <!-- Quick Add Button -->
+        <TextView
+            android:id="@+id/widget_quick_add_btn"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:background="#FFE600"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- Scrollable ListView (Collection Widget) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#141414"
+        android:padding="4dp">
+
+        <ListView
+            android:id="@+id/widget_tasks_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#222222"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:text="✔ ALL OBJECTIVES COMPLETE"
+            android:textColor="#00E676"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Footer Action -->
+    <TextView
+        android:id="@+id/widget_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="[ TAP ITEM TO TOGGLE • TAP [+] TO ADD ]"
+        android:textColor="#777777"
+        android:textSize="9sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

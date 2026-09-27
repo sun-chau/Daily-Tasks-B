@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timetable_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/timetable_widget_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="TODAY'S TIMETABLE"
+            android:textColor="#2979FF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timetable_widget_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1A1A1A"
+            android:fontFamily="monospace"
+            android:paddingStart="6dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:layout_marginEnd="6dp"
+            android:text="SCHEDULE"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <!-- Quick Add Button -->
+        <TextView
+            android:id="@+id/timetable_quick_add_btn"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:background="#2979FF"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- Hero Card with Venue & Live Progress -->
+    <LinearLayout
+        android:id="@+id/timetable_hero_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#161B22"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/timetable_hero_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00E676"
+                android:textColor="#000000"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="1dp"
+                android:text="⚡ LIVE NOW" />
+
+            <TextView
+                android:id="@+id/timetable_hero_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:text="10:00 - 11:00 AM" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timetable_hero_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="#FFE600"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="Statistics Lecture" />
+
+        <!-- Classroom Venue Indicator -->
+        <TextView
+            android:id="@+id/timetable_hero_venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00FFFF"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="📍 Hall B - Room 204" />
+
+        <!-- Live Class Progress Bar -->
+        <ProgressBar
+            android:id="@+id/timetable_hero_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:max="100"
+            android:progress="45"
+            android:progressTint="#00E676"
+            android:progressBackgroundTint="#333333" />
+    </LinearLayout>
+
+    <!-- Schedule List View -->
+    <LinearLayout
+        android:id="@+id/timetable_slots_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#141414"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/timetable_slot_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingVertical="2dp"
+            android:text="• 10:00 AM Statistics @ Hall B"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/timetable_slot_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingVertical="2dp"
+            android:text="• 01:30 PM Database Lab @ CS Lab 3"
+            android:textColor="#D5D5D5"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/timetable_slot_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingVertical="2dp"
+            android:text=""
+            android:textColor="#A0A0A0"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Footer Action -->
+    <TextView
+        android:id="@+id/timetable_widget_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="[ TAP TO OPEN TIMETABLE • TAP [+] TO ADD ]"
+        android:textColor="#777777"
+        android:textSize="9sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

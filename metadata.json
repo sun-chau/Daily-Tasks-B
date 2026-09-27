@@ -1,0 +1,6 @@
+{
+  "name": "Daily Tasks",
+  "description": "Utilitarian brutalist daily task tracker with habit heat map, future task countdowns, and productivity insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
